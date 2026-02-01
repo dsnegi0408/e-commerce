@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script>
+            function divform()
+            {
+                var name=document.negiform.NAME.value;
+                var pass=document.negiform.pwd.value;
+                var mail=document.negiform.email.value;
+                var regmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+                var regname=/^[a-zA-Z]+[a-zA-Z]+$/;
+
+                if(name==null || name=="" || regname.test(name) || name.length<8)
+                {
+                    alert("enter the correct name")
+                    return false;
+
+                } 
+                else if(pass.lenght<8)
+                {
+                    alert("passwornd must be at least 6 character");
+                    return false;
+                }
+                else if(mail=="" || regemail.test(mail))
+                {
+                    alert("enter correc email");
+                    return false;
+
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="negiform" action="tx.html" onsubmit="return divform()">
+        name :<input type="text" name="NAME"></br>
+        password:<input type="password" name="pwd"></br>
+        email:<input type="text" name="email"></br>
+        <input type="submit" value="register">
+        </form>
+        </body>
+        </html>
+        
+        
+        
+        
+        </form>
